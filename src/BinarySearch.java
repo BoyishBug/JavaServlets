@@ -26,31 +26,54 @@ public class BinarySearch extends HttpServlet {
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
-    public static boolean binarySearch(int[] array1, int searchElement) {
+    public static boolean binarySearch(int[] numArray, int numSearch) {
+    // Public static boolean method that takes in an int array and an int variable
 
-        int indexOne = 0;//first index
-        int indexLast = array1.length - 1;//last index in array
+        int numStart = 0;
+        // Initializes numStart as an int and sets it to 0
+        
+        int numEnd = numArray.length - 1;
+        // Initializes numEnd as an int and sets it to numArray.length - 1 to determin the length of the 
+        // array
 
 
-        while (indexOne <= indexLast) {
-            int midNum = (indexOne + indexLast) / 2;//divides array into two and finds middle number
+        while (numStart <= numEnd) {
+        // While loop that loops through while numStart is less than or equal to numEnd
+        	
+            int numMiddle = (numStart + numEnd) / 2;
+            // Initializes numMiddle as an int and sets it (numStart + numEnd) / 2 to find the middle of
+            // numArray
 
-            if (array1[midNum] == searchElement) {//middle number is the element we are searching for so we return true
+            if (numArray[numMiddle] == numSearch) {
+            // If statement to determine if the number at numArray[numMiddle] is equal to numSearch
+            	
                 return true;
+                // If statement is true it returns true
+                
             }
 
+            else if (numArray[numMiddle] < numSearch) {
+            // Else if statement to determine if the number at numArray[numMiddle] is less than numSearch
+            	
+                numStart = numMiddle + 1;
+            	// If statement is true it sets numStart to numMiddle + 1
+                
+            }
 
-            // number is not in the first half of the array, but could be in upper half
-            else if (array1[midNum] < searchElement)
-                indexOne = midNum + 1;
-
-
-                // number is not in upper half of array, but could be in lower half yet
-            else if (array1[midNum] > searchElement)
-                indexLast = midNum - 1;
+            else if (numArray[numMiddle] > numSearch) {
+            // Else if statement that determines if the number at numArray[numMiddle] is greater than
+            // numSearch
+            	
+                numEnd = numStart - 1;
+            	// If statement is true it set numEnd to numMiddle - 1
+                
+            }
 
         }
-        return false;//element was not found so false is returned 
+        
+        return false;
+        // Returns false if numSearch wasn't found in numArray
+        
     }
 
     public static void numberSwap(int numOne, int numTwo, int[] numArray) {
@@ -117,6 +140,7 @@ public class BinarySearch extends HttpServlet {
         doGet(request, response);
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
+        // Initializes out as a PrintWriter to allow messages to be printed out to the webpage
 
         String oneSequence = request.getParameter("arr1");//save the numbers input by user as a string
         String[] arr = oneSequence.split(",");//save the numbers entered into an array, they will be split on a comma
