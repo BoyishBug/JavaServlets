@@ -50,8 +50,8 @@ public class BinarySearch extends HttpServlet {
                 return true;
                 // If statement is true it returns true
                 
-            }
-
+            }            
+            
             else if (numArray[numMiddle] < numSearch) {
             // Else if statement to determine if the number at numArray[numMiddle] is less than numSearch
             	
@@ -64,14 +64,14 @@ public class BinarySearch extends HttpServlet {
             // Else if statement that determines if the number at numArray[numMiddle] is greater than
             // numSearch
             	
-                numEnd = numStart - 1;
+                numEnd = numMiddle - 1;
             	// If statement is true it set numEnd to numMiddle - 1
                 
             }
-
+            
         }
         
-        return false;
+         return false;
         // Returns false if numSearch wasn't found in numArray
         
     }
