@@ -18,10 +18,11 @@ Group Project-->
 <body>
 <!-- These are the hyperlinks, and they are on the index page. The user will click a hyperlink to call a specific servlet. -->
 <h4>
-	<a href="${pageContext.request.contextPath}/RecursiveAdd.jsp">[Triangular Number Calculator]   </a>
-	<a href="${pageContext.request.contextPath}/RecursiveMult.jsp">[Factorial Calculator]   </a>
+    <a href="${pageContext.request.contextPath}/index.jsp">[Home]</a>
+	<a href="${pageContext.request.contextPath}/RecursiveAdd.jsp">[Triangular Number Calculator]</a>
+	<a href="${pageContext.request.contextPath}/RecursiveMult.jsp">[Factorial Calculator]</a>
     <a href="${pageContext.request.contextPath}/BinarySearch.jsp">[Binary Search]   </a>
-	<a href="${pageContext.request.contextPath}/Calculator.jsp">[Simple Math Calculator]   </a>
+	<a href="${pageContext.request.contextPath}/Calculator.jsp">[Simple Math Calculator]</a>
 	<a href="${pageContext.request.contextPath}/Queue.jsp">[Queue Implementation]</a>
 </h4>
 

@@ -8,11 +8,12 @@
 </head>
 <body>
 <h4>
-    <a href="${pageContext.request.contextPath}/index.jsp">[Home]   </a>
-	<a href="${pageContext.request.contextPath}/RecursiveAdd.jsp">[Triangular Number Calculator]   </a>
-	<a href="${pageContext.request.contextPath}/RecursiveMult.jsp">[Factorial Calculator]   </a>
-	<a href="${pageContext.request.contextPath}/Calculator.jsp">[Simple Math Calculator]   </a>
-	<a href="${pageContext.request.contextPath}/Queue.jsp">[Queue Implementation]</a>
+    <a href="${pageContext.request.contextPath}/index.jsp">[Home]</a>
+    <a href="${pageContext.request.contextPath}/RecursiveAdd.jsp">[Triangular Number Calculator]</a>
+    <a href="${pageContext.request.contextPath}/RecursiveMult.jsp">[Factorial Calculator]</a>
+    <a href="${pageContext.request.contextPath}/BinarySearch.jsp">[Binary Search]   </a>
+    <a href="${pageContext.request.contextPath}/Calculator.jsp">[Simple Math Calculator]</a>
+    <a href="${pageContext.request.contextPath}/Queue.jsp">[Queue Implementation]</a>
 </h4>
 <form action="binarySEARCH" method="post">
     <h1>Enter the array of numbers and the number being searched for.</h1>

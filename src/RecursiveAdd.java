@@ -51,6 +51,15 @@ public class RecursiveAdd extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();//initialize variable out so that I can print to the web app
 
+        out.println("<h4>\n" +
+                "    <a href=\"${pageContext.request.contextPath}/index.jsp\">[Home]</a>\n" +
+                "\t<a href=\"${pageContext.request.contextPath}/RecursiveAdd.jsp\">[Triangular Number Calculator]</a>\n" +
+                "\t<a href=\"${pageContext.request.contextPath}/RecursiveMult.jsp\">[Factorial Calculator]</a>\n" +
+                "    <a href=\"${pageContext.request.contextPath}/BinarySearch.jsp\">[Binary Search]   </a>\n" +
+                "\t<a href=\"${pageContext.request.contextPath}/Calculator.jsp\">[Simple Math Calculator]</a>\n" +
+                "\t<a href=\"${pageContext.request.contextPath}/Queue.jsp\">[Queue Implementation]</a>\n" +
+                "</h4>");
+
         int n1 = Integer.parseInt(request.getParameter("number1"));//capture the user's input from the jsp form and convert that string value to an int
 
         out.println("<h1>" + "The triangular number of " + n1 + " is " + addRecursive(n1) + "</h1>");//print out the sum of the first n numbers to the web app

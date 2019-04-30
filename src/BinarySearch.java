@@ -142,6 +142,15 @@ public class BinarySearch extends HttpServlet {
         PrintWriter out = response.getWriter();
         // Initializes out as a PrintWriter to allow messages to be printed out to the webpage
 
+        out.println("<h4>\n" +
+                "    <a href=\"${pageContext.request.contextPath}/index.jsp\">[Home]</a>\n" +
+                "\t<a href=\"${pageContext.request.contextPath}/RecursiveAdd.jsp\">[Triangular Number Calculator]</a>\n" +
+                "\t<a href=\"${pageContext.request.contextPath}/RecursiveMult.jsp\">[Factorial Calculator]</a>\n" +
+                "    <a href=\"${pageContext.request.contextPath}/BinarySearch.jsp\">[Binary Search]</a>\n" +
+                "\t<a href=\"${pageContext.request.contextPath}/Calculator.jsp\">[Simple Math Calculator]</a>\n" +
+                "\t<a href=\"${pageContext.request.contextPath}/Queue.jsp\">[Queue Implementation]</a>\n" +
+                "</h4>");
+
         String oneSequence = request.getParameter("arr1");//save the numbers input by user as a string
         String[] arr = oneSequence.split(",");//save the numbers entered into an array, they will be split on a comma
         int[] numbers = new int[arr.length];//initialize new int array equal to the string array length
