@@ -7,6 +7,15 @@
     <title>Calculator Methods</title>
 </head>
 <body>
+
+<h4>
+	<a href="${pageContext.request.contextPath}/index.jsp">[Home]   </a>
+	<a href="${pageContext.request.contextPath}/RecursiveAdd.jsp">[Triangular Number Calculator]   </a>
+	<a href="${pageContext.request.contextPath}/RecursiveMult.jsp">[Factorial Calculator]   </a>
+    <a href="${pageContext.request.contextPath}/BinarySearch.jsp">[Binary Search]   </a>
+	<a href="${pageContext.request.contextPath}/Queue.jsp">[Queue Implementation]</a>
+</h4>
+
 <form action="CALCULATOR" method="post">
     <!-- This is a form to capture the user's two integers and one string value that are input,they are all saved as strings  -->
     <h1>Enter two numbers that will be used with the calculator.</h1>

@@ -7,6 +7,13 @@
     <title>Binary Searching and Sorting</title>
 </head>
 <body>
+<h4>
+    <a href="${pageContext.request.contextPath}/index.jsp">[Home]   </a>
+	<a href="${pageContext.request.contextPath}/RecursiveAdd.jsp">[Triangular Number Calculator]   </a>
+	<a href="${pageContext.request.contextPath}/RecursiveMult.jsp">[Factorial Calculator]   </a>
+	<a href="${pageContext.request.contextPath}/Calculator.jsp">[Simple Math Calculator]   </a>
+	<a href="${pageContext.request.contextPath}/Queue.jsp">[Queue Implementation]</a>
+</h4>
 <form action="binarySEARCH" method="post">
     <h1>Enter the array of numbers and the number being searched for.</h1>
     <!-- This is a form to capture the user's array of ints and the int we are searching for  -->

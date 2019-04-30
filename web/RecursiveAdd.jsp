@@ -10,6 +10,15 @@ Group Project-->
     <title>Triangle Number (Recursive Addition)</title>
 </head>
 <body>
+
+<h4>
+	<a href="${pageContext.request.contextPath}/index.jsp">[Home]   </a>
+	<a href="${pageContext.request.contextPath}/RecursiveMult.jsp">[Factorial Calculator]   </a>
+    <a href="${pageContext.request.contextPath}/BinarySearch.jsp">[Binary Search]   </a>
+	<a href="${pageContext.request.contextPath}/Calculator.jsp">[Simple Math Calculator]   </a>
+	<a href="${pageContext.request.contextPath}/Queue.jsp">[Queue Implementation]</a>
+</h4>
+
 <form action="recursiveADD" method="post">
     <!-- This is a form to capture the user's integer input. They are saved as strings.-->
     <h1>Find any triangular number using this calculator!</h1>
