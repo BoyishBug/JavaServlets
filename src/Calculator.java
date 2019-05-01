@@ -69,6 +69,12 @@ public class Calculator extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();//initialize variable out so that I can print to the web app
+
+        double n1 = Double.parseDouble(request.getParameter("number1"));//capture the user's input from the jsp form and convert that string value to an int
+        double n2 = Double.parseDouble(request.getParameter("number2"));//capture the user's input from the jsp form and convert that string value to an int
+        String operation = request.getParameter("operation");//capture the user's string input from jsp form and save it as a string
+        double result = math(n1, n2, operation);
+        out.println("<h1>The " + operation + " of " + n1 + " and " + n2 + " equals " + result + "</h1>");//print out the addition, subtraction, multiplication, or division of the first two numbers
         out.println("<h4>\n" +
                 "    <a href=\"index.jsp\">[Home]</a>\n" +
                 "\t<a href=\"RecursiveAdd.jsp\">[Triangular Number Calculator]</a>\n" +
@@ -77,11 +83,6 @@ public class Calculator extends HttpServlet {
                 "\t<a href=\"Calculator.jsp\">[Simple Math Calculator]</a>\n" +
                 "\t<a href=\"Queue.jsp\">[Queue Implementation]</a>\n" +
                 "</h4>");
-        double n1 = Double.parseDouble(request.getParameter("number1"));//capture the user's input from the jsp form and convert that string value to an int
-        double n2 = Double.parseDouble(request.getParameter("number2"));//capture the user's input from the jsp form and convert that string value to an int
-        String operation = request.getParameter("operation");//capture the user's string input from jsp form and save it as a string
-        double result = math(n1, n2, operation);
-        out.println("<h1>The " + operation + " of " + n1 + " and " + n2 + " equals " + result + "</h1>");//print out the addition, subtraction, multiplication, or division of the first two numbers
     }
 }
 
