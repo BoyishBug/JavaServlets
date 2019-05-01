@@ -40,12 +40,12 @@ public class Queue extends HttpServlet {
         String oneSequence = request.getParameter("numbers");//save the numbers input by user as a string
         PrintWriter out = response.getWriter();//initialize variable out so that I can print to the web app
         out.println("<h4>\n" +
-                "    <a href=\"${pageContext.request.contextPath}/index.jsp\">[Home]</a>\n" +
-                "\t<a href=\"${pageContext.request.contextPath}/RecursiveAdd.jsp\">[Triangular Number Calculator]</a>\n" +
-                "\t<a href=\"${pageContext.request.contextPath}/RecursiveMult.jsp\">[Factorial Calculator]</a>\n" +
-                "    <a href=\"${pageContext.request.contextPath}/BinarySearch.jsp\">[Binary Search]   </a>\n" +
-                "\t<a href=\"${pageContext.request.contextPath}/Calculator.jsp\">[Simple Math Calculator]</a>\n" +
-                "\t<a href=\"${pageContext.request.contextPath}/Queue.jsp\">[Queue Implementation]</a>\n" +
+                "    <a href=\"index.jsp\">[Home]</a>\n" +
+                "\t<a href=\"RecursiveAdd.jsp\">[Triangular Number Calculator]</a>\n" +
+                "\t<a href=\"RecursiveMult.jsp\">[Factorial Calculator]</a>\n" +
+                "    <a href=\"BinarySearch.jsp\">[Binary Search]</a>\n" +
+                "\t<a href=\"Calculator.jsp\">[Simple Math Calculator]</a>\n" +
+                "\t<a href=\"Queue.jsp\">[Queue Implementation]</a>\n" +
                 "</h4>");
         String[] arr = oneSequence.split(",");//save the numbers entered into an array, they will be split on a comma
         int[] numbers = new int[arr.length];//initialize new int array equal to the string array length
